@@ -19,11 +19,9 @@ class WildController extends AbstractController
     }
 
     /**
-     * @param string $slug The slugger
-     * @Route("/show/{slug}",
-     * requirements={"slug"="[a-z0-9-]+"},
-     * name="show")
+     * @param string $slug
      * @return Response
+     * @Route("/show/{slug}", requirements={"slug" = "[a-z0-9-]+"}, name="show")
     */
     public function show(string $slug = ''): Response
     {
