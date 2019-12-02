@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: white !important;
+}
+
+$theme-colors: (
+  "primary": rgb(39, 110, 168),
+  "danger": rgb(64, 138, 172)
+);
