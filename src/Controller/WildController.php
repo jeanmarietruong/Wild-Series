@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/wild", name="wild_")
  */
-class WildController extends AbstractController
+ class WildController extends AbstractController
 {
     /**
      * @Route("/", name="index")
