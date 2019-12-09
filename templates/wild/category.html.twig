@@ -5,16 +5,16 @@
 {% block body %}
 <h1 class="m-3">Les 3 dernières séries de la catégorie {{ categoryName }}</h1>
 <div class="container">
-<div class="row">
-        {% for serie in program %}
-            <div class="media col-4">
-                <img class="img-thumbnail mr-3" src="{{ serie.poster }}" alt="" style="width:150px">
-                <div class="media-body">
-                    <h2 style="height: 120px;">{{ serie.id }} - {{ serie.title }} </h2>
-                    <p> {{ serie.summary }}</p>
-                </div>
+    <div class="row">
+    {% for serie in program %}
+        <div class="media col-4">
+            <img class="img-thumbnail mr-3" src="{{ serie.poster }}" alt="" style="width:150px">
+            <div class="media-body">
+                <h2 style="height: 120px;">{{ serie.id }} - {{ serie.title }} </h2>
+                <p> {{ serie.summary }}</p>
             </div>
-        {% endfor %}
+        </div>
+    {% endfor %}
     </div>
 </div>
 
