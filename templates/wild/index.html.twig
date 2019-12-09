@@ -1,27 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}All programs{% endblock %}
+{% block title %}All programs
+{% endblock %}
 
 {% block body %}
-<h1 class="m-3">Toutes les séries de la table program : </h1>
-<div class="container">
-    <div class="row">
-    {% for program in programs %}
-        <div class="col-4 mt-3 mb-3">
-            <div>
-                <h2 style="height: 120px;">{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
-                <p>{{ program.summary }}</p>
-            </div>
-        </div>
-    {% else %}
-        Aucune série trouvée.
-    {% endfor %}
-    </div>
-</div>
+	<h1 class="m-3">Toutes les séries de la table program :
+	</h1>
+	<div class="container">
+		<div class="row">
+			{% for program in programs %}
+				<div class="col-4 mt-3 mb-3">
+					<div>
+						<h2 style="height: 120px;">{{ loop.index }}
+							/
+							{{ program.title }}
+							- Catégorie :
+							{{ program.category.name }}</h2>
+						<p>{{ program.summary }}</p>
+					</div>
+				</div>
+			{% else %}
+				Aucune série trouvée.
+			{% endfor %}
+		</div>
+	</div>
 
-<div class="m-3">
-    <a href="{{ path('app_index') }}">
-        Retour à l'accueil
-    </a>
-</div>
+	<div class="m-3">
+		<a href="{{ path('app_index') }}">
+			Retour à l'accueil
+		</a>
+	</div>
 {% endblock %}
